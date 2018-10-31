@@ -13,7 +13,7 @@ import dagger.Component;
  * Email:65489469@qq.com
  */
 @ActivityScope
-@Component(modules = LoginModule.class,dependencies = AppComponent.class)
+@Component(modules = LoginModule.class,dependencies = HttpComponent.class)
 public interface LoginComponent {
 
     void inject(MainActivity activity);

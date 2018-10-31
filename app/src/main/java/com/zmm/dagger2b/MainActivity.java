@@ -9,7 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.zmm.dagger2b.bean.UserBean;
-import com.zmm.dagger2b.dagger.component.AppComponent;
+import com.zmm.dagger2b.dagger.component.HttpComponent;
 import com.zmm.dagger2b.dagger.component.DaggerLoginComponent;
 import com.zmm.dagger2b.dagger.module.LoginModule;
 import com.zmm.dagger2b.mvp.presenter.LoginPresenter;
@@ -45,11 +45,11 @@ public class MainActivity extends AppCompatActivity implements LoginContract.Log
 
         mContext = this;
 
-        AppComponent appComponent = MyApplication.get(this).getAppComponent();
+        HttpComponent httpComponent = MyApplication.get(this).getAppComponent();
 
         DaggerLoginComponent
                 .builder()
-                .appComponent(appComponent)
+                .httpComponent(httpComponent)
                 .loginModule(new LoginModule(this))
                 .build()
                 .inject(this);

@@ -3,9 +3,8 @@ package com.zmm.dagger2b;
 import android.app.Application;
 import android.content.Context;
 
-import com.zmm.dagger2b.dagger.component.AppComponent;
-import com.zmm.dagger2b.dagger.component.DaggerAppComponent;
-import com.zmm.dagger2b.dagger.module.AppModule;
+import com.zmm.dagger2b.dagger.component.DaggerHttpComponent;
+import com.zmm.dagger2b.dagger.component.HttpComponent;
 import com.zmm.dagger2b.dagger.module.HttpModule;
 
 /**
@@ -16,10 +15,10 @@ import com.zmm.dagger2b.dagger.module.HttpModule;
  */
 public class MyApplication extends Application {
 
-    private AppComponent mAppComponent;
+    private HttpComponent mHttpComponent;
 
-    public AppComponent getAppComponent() {
-        return mAppComponent;
+    public HttpComponent getAppComponent() {
+        return mHttpComponent;
     }
 
     public static MyApplication get(Context context){
@@ -30,7 +29,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-        mAppComponent = DaggerAppComponent.builder().httpModule(new HttpModule()).appModule(new AppModule(this)).build();
+        mHttpComponent = DaggerHttpComponent.builder().httpModule(new HttpModule()).build();
 
     }
 }
