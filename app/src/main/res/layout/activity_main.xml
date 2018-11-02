@@ -91,6 +91,25 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            android:background="#6c6c6c"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tv_login_next"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="下个界面"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
         <TextView
             android:id="@+id/tv_content"
             android:layout_width="match_parent"

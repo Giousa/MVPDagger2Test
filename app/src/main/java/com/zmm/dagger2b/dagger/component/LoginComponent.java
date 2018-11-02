@@ -1,6 +1,7 @@
 package com.zmm.dagger2b.dagger.component;
 
 import com.zmm.dagger2b.MainActivity;
+import com.zmm.dagger2b.TestActivity;
 import com.zmm.dagger2b.dagger.ActivityScope;
 import com.zmm.dagger2b.dagger.module.LoginModule;
 
@@ -17,4 +18,6 @@ import dagger.Component;
 public interface LoginComponent {
 
     void inject(MainActivity activity);
+
+    void inject(TestActivity activity);
 }

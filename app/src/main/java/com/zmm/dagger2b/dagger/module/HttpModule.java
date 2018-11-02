@@ -1,8 +1,5 @@
 package com.zmm.dagger2b.dagger.module;
 
-import android.app.Application;
-
-import com.google.gson.Gson;
 import com.zmm.dagger2b.http.ApiService;
 
 import java.util.concurrent.TimeUnit;
